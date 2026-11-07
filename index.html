@@ -268,6 +268,22 @@ h1 .sub{background:linear-gradient(90deg,#fff,#d9c4ff 60%,var(--gold));-webkit-b
 .next a{transition:transform .25s}
 footer{background:linear-gradient(0deg,color-mix(in srgb,var(--violet) 10%,transparent),transparent)}
 @media (prefers-reduced-motion:reduce){.checker{animation:none}.prog,.spon,.tile,.channel{transition:none}}
+
+
+/* race countdown */
+.race-clock{border-bottom:1px solid var(--line)}
+.race-clock .wrap{padding-block:8px 56px}
+.clock-head{display:grid;gap:8px;margin-bottom:28px}
+.clock-head h2{margin:0}
+.clock-head p{margin:0;color:var(--muted)}
+.clock{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.clock-box{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:26px 8px 20px;border:1px solid var(--line);background:linear-gradient(170deg,color-mix(in srgb,var(--violet) 14%,var(--panel)),var(--panel));min-width:0;overflow:hidden}
+.clock-box::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--violet),var(--gold))}
+.clock-box b{font-family:var(--display);font-weight:900;font-size:clamp(44px,9vw,84px);line-height:.95;font-variant-numeric:tabular-nums;background:linear-gradient(180deg,#fff4cf,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.clock-box span{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.clock-live{margin:18px 0 0;font-family:var(--mono);font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.clock-live[hidden]{display:none}
+@media (max-width:560px){.clock{grid-template-columns:repeat(2,1fr)}}
 </style>
 
 <header class="nav" id="topnav">
@@ -305,6 +321,22 @@ footer{background:linear-gradient(0deg,color-mix(in srgb,var(--violet) 10%,trans
   </div>
   <div class="checker" aria-hidden="true"></div>
 
+  <section class="race-clock" id="contador" style="padding-top:0">
+    <div class="wrap">
+      <div class="clock-head">
+        <div class="eyebrow">Próxima carrera</div>
+        <h2>MCM Porsche Cup</h2>
+        <p>Todos los lunes a las 7:00 PM, hora de Costa Rica.</p>
+      </div>
+      <div class="clock" id="clock" aria-label="Tiempo para la próxima carrera">
+        <div class="clock-box"><b id="c-d">--</b><span>Días</span></div>
+        <div class="clock-box"><b id="c-h">--</b><span>Horas</span></div>
+        <div class="clock-box"><b id="c-m">--</b><span>Minutos</span></div>
+        <div class="clock-box"><b id="c-s">--</b><span>Segundos</span></div>
+      </div>
+      <p class="clock-live" id="clock-live" hidden>¡En vivo ahora! La carrera está en curso.</p>
+    </div>
+  </section>
   <section>
     <div class="wrap">
       <div class="sec-head">
@@ -437,8 +469,9 @@ footer{background:linear-gradient(0deg,color-mix(in srgb,var(--violet) 10%,trans
     <div class="wrap">
       <div class="sponsors">
         <div class="spon"><span class="role">Patrocinador · Equipo Élite</span><div class="spon-row"><img class="spon-logo" src="img/velor.png" alt="Logo de Velor"><span class="name">Velor</span></div><p>Patrocinador oficial de la alineación élite de sim racing de ASR.</p></div>
-        <div class="spon"><span class="role">Aliado</span><span class="name" style="letter-spacing:.04em">Telecable</span><p>Acompaña al equipo en eventos y actividades en Costa Rica.</p></div>
+        <div class="spon"><span class="role">Aliado</span><img class="spon-wide" src="img/telecable.png" alt="Telecable" style="max-width:100%;height:auto;width:200px;display:block"><p>Acompaña al equipo en eventos y actividades en Costa Rica.</p></div>
         <div class="spon"><span class="role">Patrocinador · Diseño</span><div class="spon-row"><img class="spon-logo" src="img/tdesign.png" alt="Logo de T Design"><span class="name" style="letter-spacing:.08em">T Design</span></div><p>Patrocinador del equipo; su marca viaja en el Porsche #18.</p></div>
+        <div class="spon"><span class="role">Patrocinador</span><div class="spon-row"><img class="spon-logo" src="img/boost.png" alt="Logo de Boost Culture"><span class="name" style="letter-spacing:.06em;font-size:34px">Boost Culture</span></div><p>Patrocinador del equipo; su marca aparece en nuestros carros.</p></div>
         <div class="spon open"><span class="role">Disponible</span><span class="name">Tu marca aquí</span><p>Buscamos marcas que quieran llegar a la comunidad de esports y motorsport. <a href="#contacto">Hablemos</a>.</p></div>
       </div>
       <div class="next"><a href="#contacto"><small>Siguiente</small><b>Contacto →</b></a></div>
@@ -530,5 +563,36 @@ document.querySelectorAll('.copy[data-target]').forEach(function(btn){
   });
   document.getElementById('lb-close').addEventListener('click',function(){lb.close()});
   lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
+})();
+</script>
+<script>
+(function(){
+  /* Próximo lunes 7:00 PM en Costa Rica (UTC-6, sin horario de verano) */
+  var CR=6*3600e3, DUR=2*3600e3;
+  function next(now){
+    var sh=new Date(now-CR);
+    var t=new Date(Date.UTC(sh.getUTCFullYear(),sh.getUTCMonth(),sh.getUTCDate(),19,0,0));
+    t.setUTCDate(t.getUTCDate()+((1-sh.getUTCDay()+7)%7));
+    if(t.getTime()<=sh.getTime()) t.setUTCDate(t.getUTCDate()+7);
+    return t.getTime()+CR;
+  }
+  var clock=document.getElementById('clock'); if(!clock) return;
+  var d=document.getElementById('c-d'),h=document.getElementById('c-h'),m=document.getElementById('c-m'),sec=document.getElementById('c-s');
+  var live=document.getElementById('clock-live');
+  var target=next(Date.now());
+  function pad(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var now=Date.now();
+    if(now>=target+DUR){ target=next(now); }
+    var inCurso=now>=target && now<target+DUR;
+    live.hidden=!inCurso;
+    if(inCurso){ d.textContent='0'; h.textContent='00'; m.textContent='00'; sec.textContent='00'; return; }
+    var t=Math.max(0,Math.floor((target-now)/1000));
+    d.textContent=Math.floor(t/86400);
+    h.textContent=pad(Math.floor(t%86400/3600));
+    m.textContent=pad(Math.floor(t%3600/60));
+    sec.textContent=pad(t%60);
+  }
+  tick(); setInterval(tick,1000);
 })();
 </script>
