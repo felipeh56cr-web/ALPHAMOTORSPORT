@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Alpha Sim Racing</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +34,7 @@ header.nav .wrap{display:flex;align-items:center;justify-content:space-between;g
 .brand img{height:30px;width:auto;display:block}
 .nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
 .nav ul a{text-decoration:none;color:var(--muted)}
-.nav ul a:hover{color:var(--gold)}
+@media (hover:hover) and (pointer:fine){.nav ul a:hover{color:var(--gold)}}
 @media (max-width:760px){.nav ul{display:none}}
 
 /* checker strip */
@@ -49,14 +50,14 @@ header.nav .wrap{display:flex;align-items:center;justify-content:space-between;g
 .eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 .eyebrow .flag{display:inline-block;width:18px;height:12px;vertical-align:-1px;margin-right:8px;background:linear-gradient(#0b2a85 0 17%,#fff 0 33%,#ce1126 0 67%,#fff 0 83%,#0b2a85 0)}
 h1{font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:1;margin:20px 0 24px;text-wrap:balance}
-h1 .wordmark{display:block;width:min(100%,560px);height:auto;filter:drop-shadow(0 12px 30px rgba(0,0,0,.55))}
+h1 .wordmark{display:block;width:min(100%,380px);height:auto;filter:drop-shadow(0 12px 30px rgba(0,0,0,.55))}
 h1 .sub{display:block;font-size:clamp(26px,4vw,40px);letter-spacing:.22em;line-height:1;margin-top:18px;color:#f1ede8}
 .lede{max-width:34em;color:#c9c3d6;font-size:19px;margin:0 0 30px}
 .ctas{display:flex;flex-wrap:wrap;gap:12px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:transparent;cursor:pointer;font-family:var(--body);clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
 .btn.primary{background:var(--gold);border-color:var(--gold);color:#1a1405}
-.btn:hover{border-color:var(--gold)}
-.btn.primary:hover{background:#f0c65c}
+@media (hover:hover) and (pointer:fine){.btn:hover{border-color:var(--gold)}}
+@media (hover:hover) and (pointer:fine){.btn.primary:hover{background:#f0c65c}}
 .hero-logo{justify-self:center;position:relative;width:min(100%,360px);aspect-ratio:1;max-width:100%}
 .hero-logo img{width:100%;height:100%;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6))}
 .hero-logo .ring{position:absolute;inset:-6%;border:1px dashed color-mix(in srgb,var(--gold) 45%,transparent);border-radius:50%;animation:spin 40s linear infinite}
@@ -93,7 +94,7 @@ h2{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size
 /* roster */
 .roster{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
 .driver{display:flex;flex-direction:column;gap:6px;padding:22px 20px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0;transition:background .2s}
-.driver:hover{background:color-mix(in srgb,var(--gold) 6%,transparent)}
+@media (hover:hover) and (pointer:fine){.driver:hover{background:color-mix(in srgb,var(--gold) 6%,transparent)}}
 .d-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
 .d-name{font-family:var(--display);font-weight:800;font-size:28px;line-height:1;text-transform:uppercase;overflow-wrap:anywhere}
 @media (max-width:900px){.roster{grid-template-columns:repeat(2,1fr)}}
@@ -104,7 +105,7 @@ h2{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size
 .tower th{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:14px 20px;border-bottom:1px solid var(--line)}
 .tower td{padding:18px 20px;border-bottom:1px solid var(--line);vertical-align:middle}
 .tower tr:last-child td{border-bottom:0}
-.tower tbody tr:hover{background:color-mix(in srgb,var(--gold) 5%,transparent)}
+@media (hover:hover) and (pointer:fine){.tower tbody tr:hover{background:color-mix(in srgb,var(--gold) 5%,transparent)}}
 .tower .track{font-family:var(--display);font-weight:800;font-size:24px;text-transform:uppercase;line-height:1.05}
 .tower .series{font-family:var(--mono);font-size:13px;color:var(--muted)}
 .chip{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border:1px solid var(--line);white-space:nowrap}
@@ -120,7 +121,7 @@ h2{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size
 .gallery button:first-child{grid-column:span 2}
 .gallery img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3;transition:transform .5s ease}
 .gallery button:first-child img{aspect-ratio:16/9}
-.gallery button:hover img{transform:scale(1.03)}
+@media (hover:hover) and (pointer:fine){.gallery button:hover img{transform:scale(1.03)}}
 .gallery figcaption{position:absolute;left:0;bottom:0;padding:10px 14px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#eee;background:linear-gradient(0deg,rgba(0,0,0,.75),transparent);width:100%;text-align:left}
 @media (max-width:760px){.gallery{grid-template-columns:1fr 1fr}.gallery button:first-child{grid-column:1 / -1}}
 @media (max-width:460px){.gallery{grid-template-columns:1fr}.gallery button:first-child{grid-column:auto}.gallery button:first-child img{aspect-ratio:4/3}}
@@ -151,9 +152,9 @@ dialog.lb button{position:absolute;top:10px;right:10px;font-family:var(--mono);f
 .channel .val{font-weight:600;font-size:17px;overflow-wrap:anywhere;user-select:all}
 .channel > div{min-width:0}
 .channel a.val{text-decoration:none}
-.channel a.val:hover{color:var(--gold)}
+@media (hover:hover) and (pointer:fine){.channel a.val:hover{color:var(--gold)}}
 .copy{flex:none;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:8px 12px;background:transparent;color:var(--ink);border:1px solid var(--line);cursor:pointer}
-.copy:hover{border-color:var(--gold);color:var(--gold)}
+@media (hover:hover) and (pointer:fine){.copy:hover{border-color:var(--gold);color:var(--gold)}}
 @media (max-width:820px){.contact{grid-template-columns:1fr;gap:28px}}
 
 footer{padding-block:34px;color:var(--muted);font-size:14px}
@@ -164,8 +165,8 @@ footer .mono{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-tra
 
 /* multi-page: views, page heads, home tiles, mobile menu */
 .view{min-height:50vh}
-.view:not([hidden]){animation:viewIn .5s cubic-bezier(.2,.7,.2,1) both}
-@keyframes viewIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.view:not([hidden]){animation:viewIn 320ms cubic-bezier(0.23,1,0.32,1) both}
+@keyframes viewIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.view:not([hidden]){animation:none}}
 .view:not(.home) section{padding-block:56px 84px}
 .nav ul a[aria-current="page"]{color:var(--gold)}
@@ -182,7 +183,7 @@ footer .mono{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-tra
 .page-head .wrap{padding-block:56px 44px;display:grid;gap:14px}
 .crumbs{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .crumbs a{color:var(--muted);text-decoration:none}
-.crumbs a:hover{color:var(--gold)}
+@media (hover:hover) and (pointer:fine){.crumbs a:hover{color:var(--gold)}}
 .crumbs span{color:var(--gold)}
 .page-head h1{font-size:clamp(48px,9vw,96px);line-height:.9;margin:0;text-transform:uppercase;letter-spacing:.01em}
 .page-head p{margin:0;max-width:38em;color:var(--muted);font-size:18px}
@@ -191,7 +192,7 @@ footer .mono{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-tra
 .next a{display:inline-flex;flex-direction:column;align-items:flex-end;gap:2px;text-decoration:none;padding:16px 0 0;border-top:2px solid var(--gold);min-width:min(100%,280px)}
 .next small{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .next b{font-family:var(--display);font-weight:800;font-size:30px;text-transform:uppercase}
-.next a:hover b{color:var(--gold)}
+@media (hover:hover) and (pointer:fine){.next a:hover b{color:var(--gold)}}
 
 .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .tile{position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;min-height:220px;padding:22px;text-decoration:none;border:1px solid var(--line);background:var(--panel);overflow:hidden;isolation:isolate}
@@ -201,8 +202,8 @@ footer .mono{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-tra
 .tile .t-title{font-family:var(--display);font-weight:800;font-size:36px;line-height:.95;text-transform:uppercase;color:#f3f0f7}
 .tile .t-desc{color:#c3bdd0;font-size:15px;max-width:26em}
 .tile .arrow{position:absolute;top:18px;right:20px;font-family:var(--mono);font-size:18px;color:var(--gold);transition:transform .25s}
-.tile:hover{border-color:var(--gold)}
-.tile:hover .arrow{transform:translateX(4px)}
+@media (hover:hover) and (pointer:fine){.tile:hover{border-color:var(--gold)}}
+@media (hover:hover) and (pointer:fine){.tile:hover .arrow{transform:translateX(4px)}}
 .tile.wide{grid-column:span 2}
 @media (max-width:900px){.tiles{grid-template-columns:1fr 1fr}.tile.wide{grid-column:span 2}}
 @media (max-width:560px){.tiles{grid-template-columns:1fr}.tile.wide{grid-column:auto}.tile{min-height:180px}}
@@ -210,61 +211,61 @@ footer .mono{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-tra
 
 /* ---- color & life pass ---- */
 body{background:radial-gradient(900px 520px at 100% -8%,rgba(138,92,240,.22),transparent 60%),radial-gradient(760px 460px at -8% 46%,rgba(228,181,70,.10),transparent 62%),var(--carbon)}
-.checker{height:8px;background:linear-gradient(90deg,var(--gold),var(--violet) 50%,var(--gold));opacity:1;animation:shimmer 6s linear infinite;background-size:200% 100%}
+.checker{height:8px;background:linear-gradient(90deg,var(--gold),var(--violet) 50%,var(--gold));opacity:1}
 @keyframes shimmer{to{background-position:200% 0}}
 h2{background:linear-gradient(100deg,#fff4cf 0%,var(--gold) 45%,#c9a2ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .eyebrow{display:inline-block;padding:5px 12px;border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);border-radius:999px;background:color-mix(in srgb,var(--gold) 9%,transparent)}
 .hero .eyebrow{background:color-mix(in srgb,#000 35%,transparent)}
 .btn.primary{background:linear-gradient(120deg,#f6d26b,var(--gold) 55%,#c98f2a);box-shadow:0 10px 30px -10px rgba(228,181,70,.6)}
-.btn.primary:hover{background:linear-gradient(120deg,#ffe08a,#f0c65c 55%,#d99c35);transform:translateY(-1px)}
+@media (hover:hover) and (pointer:fine){.btn.primary:hover{background:linear-gradient(120deg,#ffe08a,#f0c65c 55%,#d99c35);transform:translateY(-1px)}}
 .btn:not(.primary){border-color:color-mix(in srgb,var(--violet) 60%,var(--line))}
-.btn:not(.primary):hover{background:color-mix(in srgb,var(--violet) 18%,transparent);border-color:var(--violet)}
+@media (hover:hover) and (pointer:fine){.btn:not(.primary):hover{background:color-mix(in srgb,var(--violet) 18%,transparent);border-color:var(--violet)}}
 .hero::before{background:linear-gradient(90deg,rgba(8,7,12,.92) 0%,rgba(20,10,40,.6) 50%,rgba(8,7,12,.2) 100%),linear-gradient(0deg,rgba(8,7,12,.9) 0%,transparent 50%),linear-gradient(200deg,rgba(138,92,240,.25),transparent 60%)}
 h1 .sub{background:linear-gradient(90deg,#fff,#d9c4ff 60%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
 .about .big{background:linear-gradient(90deg,var(--ink),#d9c4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.pillars div{transition:padding-left .25s,background .25s}
-.pillars div:hover{padding-left:12px;background:linear-gradient(90deg,color-mix(in srgb,var(--violet) 14%,transparent),transparent)}
+.pillars div{transition:background .25s}
+@media (hover:hover) and (pointer:fine){.pillars div:hover{background:linear-gradient(90deg,color-mix(in srgb,var(--violet) 14%,transparent),transparent)}}
 .pillars dt{color:var(--violet)}
 .prog{position:relative;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s}
 .prog::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--violet),var(--gold))}
-.prog:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--violet) 60%,var(--line));box-shadow:0 18px 40px -20px rgba(138,92,240,.6)}
-.prog.feature:hover{box-shadow:0 18px 40px -18px rgba(228,181,70,.45)}
+@media (hover:hover) and (pointer:fine){.prog:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--violet) 60%,var(--line));box-shadow:0 18px 40px -20px rgba(138,92,240,.6)}}
+@media (hover:hover) and (pointer:fine){.prog.feature:hover{box-shadow:0 18px 40px -18px rgba(228,181,70,.45)}}
 .prog .tag{color:var(--violet)}
 .prog.feature .tag{color:var(--gold)}
 .driver{background:linear-gradient(160deg,transparent,color-mix(in srgb,var(--violet) 8%,transparent))}
 .driver:nth-child(3n+2) .d-lbl{color:var(--violet)}
 .driver:nth-child(3n+3) .d-lbl{color:#7fd3ff}
-.driver:hover{background:linear-gradient(160deg,color-mix(in srgb,var(--gold) 14%,transparent),color-mix(in srgb,var(--violet) 10%,transparent))}
+@media (hover:hover) and (pointer:fine){.driver:hover{background:linear-gradient(160deg,color-mix(in srgb,var(--gold) 14%,transparent),color-mix(in srgb,var(--violet) 10%,transparent))}}
 .d-name{transition:color .2s}
-.driver:hover .d-name{color:var(--gold)}
-.tower tbody tr:hover{background:linear-gradient(90deg,color-mix(in srgb,var(--violet) 14%,transparent),color-mix(in srgb,var(--gold) 6%,transparent))}
+@media (hover:hover) and (pointer:fine){.driver:hover .d-name{color:var(--gold)}}
+@media (hover:hover) and (pointer:fine){.tower tbody tr:hover{background:linear-gradient(90deg,color-mix(in srgb,var(--violet) 14%,transparent),color-mix(in srgb,var(--gold) 6%,transparent))}}
 .chip.sim{background:color-mix(in srgb,var(--violet) 14%,transparent)}
 .chip.real{background:color-mix(in srgb,var(--gold) 12%,transparent)}
 .stripe span{background:linear-gradient(180deg,var(--violet),#5b3fd1)}
 .stripe.real span{background:linear-gradient(180deg,var(--gold),var(--gold-deep))}
 .spon{position:relative;transition:transform .25s,box-shadow .25s;background:linear-gradient(180deg,var(--panel),var(--carbon))}
-.spon:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(228,181,70,.5)}
+@media (hover:hover) and (pointer:fine){.spon:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(228,181,70,.5)}}
 .spon .role{color:var(--violet)}
 .spon:first-child .role{color:var(--gold)}
 .spon.open{background:linear-gradient(135deg,color-mix(in srgb,var(--violet) 12%,transparent),transparent)}
-.spon.open:hover{border-color:var(--gold)}
+@media (hover:hover) and (pointer:fine){.spon.open:hover{border-color:var(--gold)}}
 .gallery button{transition:transform .3s,box-shadow .3s}
-.gallery button:hover{box-shadow:0 0 0 2px var(--gold),0 18px 40px -16px rgba(228,181,70,.6)}
+@media (hover:hover) and (pointer:fine){.gallery button:hover{box-shadow:0 0 0 2px var(--gold),0 18px 40px -16px rgba(228,181,70,.6)}}
 .gallery figcaption{background:linear-gradient(0deg,rgba(20,10,40,.9),transparent)}
 .tile{transition:transform .25s,border-color .25s,box-shadow .25s}
-.tile:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(138,92,240,.7)}
+@media (hover:hover) and (pointer:fine){.tile:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(138,92,240,.7)}}
 .tile:not(.photo)::after{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--gold),var(--violet));z-index:-1}
 .tile:not(.photo){background:linear-gradient(160deg,color-mix(in srgb,var(--violet) 12%,var(--panel)),var(--panel) 60%)}
 .tile .t-lbl{color:#7fd3ff}
 .tile .arrow{color:var(--violet)}
 .channel{transition:border-color .25s,transform .25s}
-.channel:hover{border-color:var(--violet);transform:translateX(4px)}
+@media (hover:hover) and (pointer:fine){.channel:hover{border-color:var(--violet);transform:translateX(4px)}}
 .contact-band{background:linear-gradient(120deg,color-mix(in srgb,var(--violet) 16%,var(--panel)),var(--panel) 45%,color-mix(in srgb,var(--gold) 10%,var(--panel)))}
 .page-head{background:radial-gradient(110% 150% at 100% 0%,rgba(138,92,240,.35),transparent 55%),radial-gradient(90% 120% at 0% 100%,rgba(228,181,70,.14),transparent 60%),var(--panel)}
 .page-head h1{background:linear-gradient(100deg,#fff,#d9c4ff 50%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
 .nav ul a[aria-current="page"]{color:var(--gold);position:relative}
 .nav ul a[aria-current="page"]::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--gold)}
-.next a:hover{transform:translateX(4px)}
+@media (hover:hover) and (pointer:fine){.next a:hover{transform:translateX(4px)}}
 .next a{transition:transform .25s}
 footer{background:linear-gradient(0deg,color-mix(in srgb,var(--violet) 10%,transparent),transparent)}
 @media (prefers-reduced-motion:reduce){.checker{animation:none}.prog,.spon,.tile,.channel{transition:none}}
@@ -284,6 +285,158 @@ footer{background:linear-gradient(0deg,color-mix(in srgb,var(--violet) 10%,trans
 .clock-live{margin:18px 0 0;font-family:var(--mono);font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
 .clock-live[hidden]{display:none}
 @media (max-width:560px){.clock{grid-template-columns:repeat(2,1fr)}}
+
+/* ASR watermark in Equipo */
+.view[data-view="equipo"]{position:relative;isolation:isolate;overflow:hidden}
+.view[data-view="equipo"]::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url("img/asr-wordmark.png") center 26% / min(94%,820px) no-repeat;opacity:.07}
+
+/* ASR logo on the Equipo tile */
+.tile.equipo-tile{background:linear-gradient(90deg,rgba(13,12,18,.94) 38%,rgba(13,12,18,.45) 100%),url("img/asr-wordmark.png") right 14% center / 74% auto no-repeat,var(--panel)}
+
+/* iRating table */
+.irating{margin-bottom:48px}
+.irating .tower td.ir{font-family:var(--display);font-weight:800;font-size:22px;text-align:right;color:var(--gold);font-variant-numeric:tabular-nums}
+.irating .tower th:last-child{text-align:right}
+.irating .tower td.series{width:64px;color:var(--muted)}
+.irating .tower td.track{font-size:18px}
+
+/* pilotos tabs */
+.seg{display:inline-flex;flex-wrap:wrap;border:1px solid var(--line);background:var(--panel);padding:4px;gap:4px;margin-bottom:32px;max-width:100%}
+.seg button{font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:12px 22px;background:transparent;border:0;color:var(--muted);cursor:pointer;transition:background .2s,color .2s}
+@media (hover:hover) and (pointer:fine){.seg button:hover{color:var(--ink)}}
+.seg button[aria-pressed="true"]{background:linear-gradient(120deg,#f6d26b,var(--gold) 55%,#c98f2a);color:#1a1405;font-weight:600}
+.seg button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.irating{margin-bottom:0}
+.irating .sec-head{margin-bottom:24px}
+
+/* motion pass: press feedback, reduced motion */
+.btn,.copy,.seg button{transition:transform 160ms ease-out,background-color .2s ease,color .2s ease,border-color .2s ease}
+.btn:active,.copy:active,.seg button:active{transform:scale(0.97)}
+@media (prefers-reduced-motion:reduce){.view:not([hidden]){animation:none}.tile,.prog,.spon,.channel,.gallery button img{transition:none}}
+
+/* visual pass: quieter, more specific to a race team */
+body{background:var(--carbon)}
+h1,h2,h1 .sub,.page-head h1,.about .big,.clock-box b{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--ink)}
+h1 .sub{color:#e9e4ef;letter-spacing:.2em}
+.clock-box b{color:#f3e2b0}
+.eyebrow{display:flex;align-items:center;gap:10px;padding:0;border:0;border-radius:0;background:none;color:var(--gold);font-size:12px;letter-spacing:.16em}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--gold);flex:none}
+.hero .eyebrow{background:none}
+.hero::before{background:linear-gradient(90deg,rgba(8,7,12,.94) 0%,rgba(8,7,12,.6) 52%,rgba(8,7,12,.18) 100%),linear-gradient(0deg,rgba(8,7,12,.9) 0%,transparent 45%)}
+.checker{height:6px;background:repeating-linear-gradient(90deg,var(--ink) 0 14px,var(--carbon) 14px 28px);opacity:.85}
+.btn.primary{background:var(--gold);border-color:var(--gold);box-shadow:none;color:#1a1405}
+.btn.primary:hover{background:#f0c65c}
+.btn:not(.primary){border-color:var(--line)}
+.btn:not(.primary):hover{background:transparent;border-color:var(--gold);color:var(--gold)}
+.seg button[aria-pressed="true"]{background:var(--gold);color:#1a1405}
+.prog,.spon,.clock-box,.tile:not(.photo),.channel,.driver{background:var(--panel)}
+.prog::before,.clock-box::before,.tile:not(.photo)::after{display:none}
+.prog.feature{background:var(--panel);border-color:var(--gold)}
+.prog.feature::before{display:block;height:2px;background:var(--gold)}
+.prog:hover,.spon:hover,.tile:hover,.channel:hover{box-shadow:none}
+.tile:not(.photo){background:var(--panel)}
+.driver:hover{background:var(--panel)}
+.driver:hover .d-name{color:var(--gold)}
+.driver:nth-child(n) .d-lbl{color:var(--gold)}
+.pillars dt{color:var(--gold)}
+.pillars div:hover{background:none}
+.tower tbody tr:hover{background:rgba(228,181,70,.05)}
+.chip.sim{background:none;color:#b9a6ff;border-color:var(--line)}
+.chip.real{background:none;color:var(--gold);border-color:var(--line)}
+.stripe span,.stripe.real span{background:var(--gold)}
+.stripe span{background:#b9a6ff}
+.stripe.real span{background:var(--gold)}
+.spon.open{background:transparent}
+.contact-band{background:var(--panel)}
+.page-head{background:var(--panel)}
+footer{background:none}
+.nav ul a[aria-current="page"]::after{height:2px;background:var(--gold)}
+.tile.equipo-tile{background:linear-gradient(90deg,rgba(13,12,18,.94) 40%,rgba(13,12,18,.5) 100%),url("img/asr-wordmark.png") right 14% center / 74% auto no-repeat,var(--panel)}
+.clock-live{color:var(--gold)}
+
+/* ---- polish pass (Emil Kowalski design-eng skills) ---- */
+:root{
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+  --ease-in-out:cubic-bezier(0.77,0,0.175,1);
+}
+
+/* 1. Hover solo en dispositivos con puntero: en móvil el hover quedaba "pegado" al tocar */
+.btn.primary:hover,.btn:not(.primary):hover,.prog:hover,.spon:hover,.tile:hover,.channel:hover,.driver:hover,.tower tbody tr:hover,.pillars div:hover{transform:none}
+.btn.primary:hover{background:var(--gold)}
+.btn:not(.primary):hover{border-color:var(--line);color:var(--ink)}
+.driver:hover .d-name{color:inherit}
+.tower tbody tr:hover{background:none}
+@media (hover:hover) and (pointer:fine){
+  .btn.primary:hover{background:#f0c65c}
+  .btn:not(.primary):hover{border-color:var(--gold);color:var(--gold)}
+  .driver:hover .d-name{color:var(--gold)}
+  .tower tbody tr:hover{background:rgba(228,181,70,.05)}
+  .prog:hover{transform:translateY(-3px)}
+  .spon:hover,.tile:hover{transform:translateY(-3px)}
+  .channel:hover{transform:translateX(3px)}
+}
+
+/* 2. Transiciones con propiedades exactas y curva fuerte; ninguna de más de 300 ms */
+.prog,.spon,.tile{transition:transform 220ms var(--ease-out),border-color 200ms ease}
+.channel{transition:transform 200ms var(--ease-out),border-color 200ms ease}
+.tile .arrow{transition:transform 200ms var(--ease-out)}
+.gallery button{transition:box-shadow 200ms ease}
+.gallery img{transition:transform 300ms var(--ease-out)}
+.d-name,.nav ul a,.crumbs a,.next b,.channel a.val{transition:color 150ms ease}
+.next a{transition:transform 200ms var(--ease-out)}
+.btn,.copy,.seg button,.menu-btn{transition:transform 160ms var(--ease-out),background-color 150ms ease,color 150ms ease,border-color 150ms ease}
+.btn:active,.copy:active,.seg button:active,.menu-btn:active,.tile:active,.gallery button:active{transform:scale(0.97)}
+
+/* 3. Cambio de página: más corto y suave (antes 320 ms) */
+.view:not([hidden]){animation:viewIn 240ms var(--ease-out) both}
+@keyframes viewIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* 4. Entrada del hero solo en la primera carga (una vez por visita, en forma de ola) */
+@keyframes rise{from{opacity:0;transform:translateY(var(--rise,10px))}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.intro .view.home{animation:none}
+.intro .hero .eyebrow{animation:fade 400ms ease both}
+.intro .hero h1 .wordmark{--rise:16px;animation:rise 600ms var(--ease-out) both}
+.intro .hero h1 .sub{--rise:10px;animation:rise 550ms var(--ease-out) 90ms both}
+.intro .hero .lede{--rise:8px;animation:rise 500ms var(--ease-out) 160ms both}
+.intro .hero .ctas{--rise:6px;animation:rise 500ms var(--ease-out) 210ms both}
+.intro .hero .caption{animation:fade 600ms ease 250ms both}
+
+/* 5. Lightbox: aparece desde 0.96 con fade, centrado (es un modal) */
+dialog.lb[open]{animation:lbIn 260ms var(--ease-out)}
+dialog.lb[open]::backdrop{animation:fade 200ms ease}
+@keyframes lbIn{from{opacity:0;transform:scale(0.96)}to{opacity:1;transform:none}}
+dialog.lb button{transition:transform 160ms var(--ease-out),background-color 150ms ease}
+dialog.lb button:active{transform:scale(0.97)}
+
+/* 6. Menú móvil: aparece desde el header en vez de saltar */
+@media (max-width:860px){
+  header.nav.open ul{animation:menuIn 180ms var(--ease-out);transform-origin:top center}
+}
+@keyframes menuIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* 7. Pestañas de Pilotos: el panel nuevo entra con un fade breve, sin cascada */
+.ptab:not([hidden]){animation:fade 180ms ease}
+
+/* 8. Ranking de iRating: podio con oro, plata y bronce */
+.irating tbody tr:nth-child(-n+3) td.series{font-family:var(--display);font-weight:900;font-size:22px}
+.irating tbody tr:nth-child(1) td.series{color:var(--gold)}
+.irating tbody tr:nth-child(2) td.series{color:#cfd3dc}
+.irating tbody tr:nth-child(3) td.series{color:#d08a52}
+.irating tbody tr:nth-child(1){background:linear-gradient(90deg,rgba(228,181,70,.10),transparent 60%)}
+.irating tbody tr:nth-child(1) td.track{color:#fff}
+.irating tbody tr:nth-child(n+4) td.ir{color:#d9cfb4}
+
+/* 9. Tarjetas de pilotos: el número del equipo como acento */
+.driver{position:relative;overflow:hidden}
+.driver::after{content:"18";position:absolute;right:-6px;bottom:-22px;font-family:var(--display);font-weight:900;font-size:96px;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(228,181,70,.10);pointer-events:none}
+
+/* 10. Menos movimiento: sin desplazamientos, se mantienen los fades */
+@media (prefers-reduced-motion:reduce){
+  .view:not([hidden]),.intro .hero *,dialog.lb[open],header.nav.open ul{animation:fade 150ms ease both!important}
+  .prog,.spon,.tile,.channel,.next a,.gallery img,.btn,.copy,.seg button{transition:none}
+  .btn:active,.copy:active,.seg button:active,.tile:active,.gallery button:active{transform:none}
+}
 </style>
 
 <header class="nav" id="topnav">
@@ -345,7 +498,7 @@ footer{background:linear-gradient(0deg,color-mix(in srgb,var(--violet) 10%,trans
       </div>
       <div class="tiles">
         <a class="tile photo wide" href="#pilotos" style="background-image:url('img/daytona-4.jpg')"><span class="arrow" aria-hidden="true">→</span><span class="t-lbl">12 pilotos</span><span class="t-title">Pilotos</span><span class="t-desc">Conocé la alineación que corre con los colores de ASR.</span></a>
-        <a class="tile" href="#equipo"><span class="arrow" aria-hidden="true">→</span><span class="t-lbl">Quiénes somos</span><span class="t-title">Equipo</span><span class="t-desc">Nuestra historia y los programas del equipo.</span></a>
+        <a class="tile equipo-tile" href="#equipo"><span class="arrow" aria-hidden="true">→</span><span class="t-lbl">Quiénes somos</span><span class="t-title">Equipo</span><span class="t-desc">Nuestra historia y los programas del equipo.</span></a>
         <a class="tile photo" href="#galeria" style="background-image:url('img/daytona-3.jpg')"><span class="arrow" aria-hidden="true">→</span><span class="t-lbl">Fotos</span><span class="t-title">Galería</span><span class="t-desc">El Porsche #18 en Daytona.</span></a>
         <a class="tile" href="#patrocinadores"><span class="arrow" aria-hidden="true">→</span><span class="t-lbl">Velor · Telecable · T Design</span><span class="t-title">Patrocinadores</span><span class="t-desc">Las marcas que nos impulsan, y espacio para la tuya.</span></a>
         <a class="tile wide" href="#contacto"><span class="arrow" aria-hidden="true">→</span><span class="t-lbl">Correo · Discord · Instagram</span><span class="t-title">Contacto</span><span class="t-desc">¿Querés correr con ASR o patrocinar al equipo? Escribinos.</span></a>
@@ -415,20 +568,56 @@ footer{background:linear-gradient(0deg,color-mix(in srgb,var(--violet) 10%,trans
   </div></div>
   <section>
     <div class="wrap">
+      <div class="seg" role="group" aria-label="Ver pilotos por">
+        <button type="button" data-tab="alineacion" aria-pressed="true">Alineación</button>
+        <button type="button" data-tab="irating" aria-pressed="false">iRating</button>
+      </div>
+      <div class="ptab" data-ptab="alineacion">
       <ul class="roster">
         <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Osvaldo Blanco</span></li>
+        <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Joel Bonilla Álvarez</span></li>
         <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Marcial Cambronero</span></li>
         <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Felipe Hernández</span></li>
         <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Luis José Marín</span></li>
         <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Ronald Matamoros</span></li>
         <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Cristian Morúa</span></li>
         <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Mariano Muñoz</span></li>
-        <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Iván Navarro</span></li>
+        <li class="driver"><span class="d-lbl">Drifting</span><span class="d-name">Iván Navarro</span></li>
         <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Emanuel Ortega</span></li>
         <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Lawrence Rojas</span></li>
+        <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Jefko Sánchez</span></li>
         <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Daniel Soto</span></li>
         <li class="driver"><span class="d-lbl">Piloto ASR</span><span class="d-name">Steve Taylor</span></li>
       </ul>
+      </div>
+      <div class="ptab" data-ptab="irating" hidden>
+    <div class="irating">
+      <div class="sec-head">
+        <div><div class="eyebrow">iRating</div><h2>Ranking del equipo</h2></div>
+        <p>Actualizado el 7 de noviembre de 2026.</p>
+      </div>
+      <div class="tower">
+        <table>
+          <thead><tr><th>Pos.</th><th>Piloto</th><th>iRating</th></tr></thead>
+          <tbody>
+            <tr><td class="series">1</td><td class="track">Emanuel Ortega</td><td class="ir">4.430 iR</td></tr>
+            <tr><td class="series">2</td><td class="track">Luis José Marín</td><td class="ir">4.071 iR</td></tr>
+            <tr><td class="series">3</td><td class="track">Osvaldo Blanco</td><td class="ir">3.896 iR</td></tr>
+            <tr><td class="series">4</td><td class="track">Mariano Muñoz</td><td class="ir">3.014 iR</td></tr>
+            <tr><td class="series">5</td><td class="track">Felipe Hernández</td><td class="ir">2.924 iR</td></tr>
+            <tr><td class="series">6</td><td class="track">Marcial Cambronero</td><td class="ir">2.750 iR</td></tr>
+            <tr><td class="series">7</td><td class="track">Steve Taylor</td><td class="ir">2.697 iR</td></tr>
+            <tr><td class="series">8</td><td class="track">Cristian Morúa Grillo</td><td class="ir">2.619 iR</td></tr>
+            <tr><td class="series">9</td><td class="track">Daniel Soto</td><td class="ir">2.390 iR</td></tr>
+            <tr><td class="series">10</td><td class="track">Lawrence Rojas</td><td class="ir">2.341 iR</td></tr>
+            <tr><td class="series">11</td><td class="track">Joel Bonilla Álvarez</td><td class="ir">2.280 iR</td></tr>
+            <tr><td class="series">12</td><td class="track">Ronald Matamoros</td><td class="ir">1.550 iR</td></tr>
+            <tr><td class="series">13</td><td class="track">Jefko Sánchez</td><td class="ir">1.304 iR</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+      </div>
       <div class="next"><a href="#galeria"><small>Siguiente</small><b>Galería →</b></a></div>
     </div>
   </section>
@@ -472,7 +661,8 @@ footer{background:linear-gradient(0deg,color-mix(in srgb,var(--violet) 10%,trans
         <div class="spon"><span class="role">Aliado</span><img class="spon-wide" src="img/telecable.png" alt="Telecable" style="max-width:100%;height:auto;width:200px;display:block"><p>Acompaña al equipo en eventos y actividades en Costa Rica.</p></div>
         <div class="spon"><span class="role">Patrocinador · Diseño</span><div class="spon-row"><img class="spon-logo" src="img/tdesign.png" alt="Logo de T Design"><span class="name" style="letter-spacing:.08em">T Design</span></div><p>Patrocinador del equipo; su marca viaja en el Porsche #18.</p></div>
         <div class="spon"><span class="role">Patrocinador</span><div class="spon-row"><img class="spon-logo" src="img/boost.png" alt="Logo de Boost Culture"><span class="name" style="letter-spacing:.06em;font-size:34px">Boost Culture</span></div><p>Patrocinador del equipo; su marca aparece en nuestros carros.</p></div>
-        <div class="spon open"><span class="role">Disponible</span><span class="name">Tu marca aquí</span><p>Buscamos marcas que quieran llegar a la comunidad de esports y motorsport. <a href="#contacto">Hablemos</a>.</p></div>
+        <div class="spon"><span class="role">Patrocinador</span><img class="spon-wide" src="img/pantera.png" alt="Logo de Pantera" style="max-width:100%;height:auto;width:200px;display:block"><p>Patrocinador del equipo; su marca aparece en nuestros carros.</p></div>
+      <div class="spon open"><span class="role">Disponible</span><span class="name">Tu marca aquí</span><p>Buscamos marcas que quieran llegar a la comunidad de esports y motorsport. <a href="#contacto">Hablemos</a>.</p></div>
       </div>
       <div class="next"><a href="#contacto"><small>Siguiente</small><b>Contacto →</b></a></div>
     </div>
@@ -539,7 +729,8 @@ footer{background:linear-gradient(0deg,color-mix(in srgb,var(--violet) 10%,trans
     nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='Menú';
     window.scrollTo(0,0);
   }
-  window.addEventListener('hashchange',show);
+  window.addEventListener('hashchange',function(){document.documentElement.classList.remove('intro');show();});
+  if(names.indexOf((location.hash||'').slice(1))<0||location.hash==='#inicio'||!location.hash){document.documentElement.classList.add('intro');setTimeout(function(){document.documentElement.classList.remove('intro')},1200);}
   show();
   btn.addEventListener('click',function(){
     var o=nav.classList.toggle('open');
@@ -596,3 +787,18 @@ document.querySelectorAll('.copy[data-target]').forEach(function(btn){
   tick(); setInterval(tick,1000);
 })();
 </script>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.seg button[data-tab]');
+  var panels=document.querySelectorAll('.ptab');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.dataset.tab;
+      btns.forEach(function(o){o.setAttribute('aria-pressed',o===b?'true':'false');});
+      panels.forEach(function(p){p.hidden=p.dataset.ptab!==t;});
+    });
+  });
+})();
+</script>
+
+</body></html>
